@@ -1,0 +1,35 @@
+[app]
+
+data_factory = 'app\niche\dataFactory'
+data_params[basepath] = 'app/niche/collections/'
+;data_params[pdo_one] = 'mysql:host=127.0.0.1'
+;data_params[pdo_two] = ''
+;data_params[pdo_three] = ''
+;data_params[nichedb] = ''
+;data_params[db] = ''
+
+;api[url_styles] = 'http://27.111.85.242/Feed.asmx/StyleFeed'
+;api[url_products] = 'http://27.111.85.242/Feed.asmx/ProductFeed'
+
+api[url_products] = 'http://wholesale.talulah.com.au/Feed.asmx/ProductFeed'
+api[url_styles] = 'http://wholesale.talulah.com.au/Feed.asmx/StyleFeed'
+
+api[wsdl_url] = 'http://27.111.85.242/Feed.asmx?wsdl'
+api[wsdl_user] = 'staff'
+api[wsdl_pass] = 'staff'
+
+configurableFactory = 'app\niche\configurableFactory'
+
+class = 'app\niche\niche'
+
+magentoCategoryMap = "config/magento_categories_map.ini"
+mapperFile = "config/niche_mapper.ini"
+mapper = "app\niche\mapper"
+callbacks = "app\niche\callbacks"
+categories = "app\niche\categories"
+attributes = "app\niche\attributes"
+fromhtml =  "app\niche\fromhtml"
+
+nichedb = ""
+
+generatedCsvName = '/var/import/niche.csv'

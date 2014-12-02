@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Citrus_Export>
+            <version>0.1.0</version>
+        </Citrus_Export>
+    </modules>
+    <global>
+        <models>
+            <citrus_export>
+                <class>Citrus_Export_Model</class>
+            </citrus_export>
+        </models>
+        <blocks>
+            <citrus_export>
+                <class>Citrus_Export_Block</class>
+            </citrus_export>
+        </blocks>
+        <helpers>
+            <citrus_export>
+                <class>Citrus_Export_Helper</class>
+            </citrus_export>
+        </helpers>
+        <resources>
+            <citrus_export_setup>
+                <setup>
+                    <module>Citrus_Export</module>
+                </setup>
+            </citrus_export_setup>
+        </resources>
+    </global>
+</config>

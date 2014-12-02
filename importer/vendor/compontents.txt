@@ -1,0 +1,22 @@
+Data
+ - Shoppify Api
+ - Domain
+ - Api Key
+ - Secret
+ = getData
+
+Mapper
+ - parse ini file
+ = getMappedArray
+
+CSVWriter
+-
+
+Callbacks
+
+App
+ - Data
+ - Mapper
+ - CSVWriter
+ - Callbacks
+ = run

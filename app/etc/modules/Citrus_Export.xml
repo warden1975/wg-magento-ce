@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Citrus_Export>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Citrus_Export>
+    </modules>
+</config>

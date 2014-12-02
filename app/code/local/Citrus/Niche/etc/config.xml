@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Citrus_Niche>
+            <version>0.1.1</version>
+             <depends>
+                <Mage_Shipping />
+                <Mage_Payment />
+                <Mage_Paygate />
+                <Mage_Checkout />
+                <Mage_Sales />
+                <Citrus_Export />
+            </depends>
+        </Citrus_Niche>
+    </modules>
+    <global>
+        <models>
+            <citrus_niche>
+                <class>Citrus_Niche_Model</class>
+            </citrus_niche>
+        </models>
+        <blocks>
+            <citrus_niche>
+                <class>Citrus_Niche_Block</class>
+            </citrus_niche>
+        </blocks>
+        <helpers>
+            <citrus_niche>
+                <class>Citrus_Niche_Helper</class>
+            </citrus_niche>
+        </helpers>
+        <resources>
+            <citrus_niche_setup>
+                <setup>
+                    <module>Citrus_Niche</module>
+                </setup>
+            </citrus_niche_setup>
+        </resources>
+        <events>
+            <sales_order_invoice_pay>
+                <observers>
+                    <citrus_niche_order>
+                        <class>citrus_niche/observer</class>
+                        <method>exportOrder</method>
+                    </citrus_niche_order>
+                </observers>
+            </sales_order_invoice_pay>
+        </events>
+    </global>
+</config>
