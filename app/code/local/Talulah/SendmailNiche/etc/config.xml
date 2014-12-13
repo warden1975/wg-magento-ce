@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Send email to admin every feed order to Niche
+*/
+-->
+<config>
+	<modules>
+		<Talulah_SendmailNiche>
+			<version>1.0.0</version>
+		</Talulah_SendmailNiche>
+	</modules>
+	<global>
+		<helpers>
+			<sendmailniche>
+				<class>Talulah_SendmailNiche_Helper</class>
+			</sendmailniche>
+		</helpers>
+		<template>
+			<email>
+				<sendmail_feed_order_niche_template translate="label" module="sendmailniche">
+					<label>Feed order to niche</label>
+					<file>talulah/niche_feed_order.html</file>
+					<type>html</type>
+				</sendmail_feed_order_niche_template>
+				<sendmail_feed_order_niche_error_template translate="label" module="sendmailniche">
+					<label>Feed order to niche error</label>
+					<file>talulah/niche_feed_order_error.html</file>
+					<type>html</type>
+				</sendmail_feed_order_niche_error_template>
+			</email>
+		</template>
+	</global>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <sendmail>
+                                            <title>Niche Integration</title>
+                                        </sendmail>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+	<default>
+		<sendmail>
+			<feed_order>
+				<active>1</active>
+				<niche_template>sendmail_feed_order_niche_template</niche_template>
+			</feed_order>
+			<feed_order_error>
+				<active>1</active>
+				<niche_error_template>sendmail_feed_order_niche_error_template</niche_error_template>
+			</feed_order_error>
+		</sendmail>
+	</default>
+</config>

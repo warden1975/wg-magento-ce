@@ -1,0 +1,14 @@
+<!--@subject Feed to niche {{var result}} (Order #{{var order.increment_id}}) @-->
+
+Dear Admin,
+<br /><br />
+Order number: {{var order.increment_id}}.
+<br />
+Customer info: Customer name: {{var order.customer_firstname}} {{var order.customer_lastname}} Email: {{var order.customer_email}}
+<br />
+Feed new order to Niche with info product:
+<br />
+{{var infoProduct}}
+<br />
+<br />
+{{var store.getFrontendName()}} Team
